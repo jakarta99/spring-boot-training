@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import tw.com.softleader.training.policy.entity.Policy;
 
-public interface PolicyRepository extends JpaRepository<Policy, Long>, BaseRepository<Policy, Long> {
+public interface PolicyRepository extends JpaRepository<Policy, Long> {
     
     @EntityGraph(value = "policy.insureds")
     Policy findByPolicyNoAndEndstNo(String policyNo, int endstNo);

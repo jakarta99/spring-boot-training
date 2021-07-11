@@ -32,18 +32,18 @@ class PolicyRepositoryTest {
         policy0.setPolicyNo("9921ABC00001");
         policy0.setEndstNo(0);
         policy0.setApplicantIdno("A123456789");
-        policy0.setApplicantLocalName("王大明");
+        policy0.setApplicantLocalName("��之���");
         
         
         Insured insured0 = new Insured();
         insured0.setInsuredIndo("A176280531");
-        insured0.setInsuredLocalName("王大華");
+        insured0.setInsuredLocalName("��之�");
         
         
         Set<Item> items = new LinkedHashSet<Item>();
         Item item = new Item();
         item.setCode("AD");
-        item.setItemLocalName("死殘");
+        item.setItemLocalName("甇餅��");
         item.setAmount(1000000);
         item.setPremium(120);
         
@@ -51,7 +51,7 @@ class PolicyRepositoryTest {
         
         item = new Item();
         item.setCode("MR");
-        item.setItemLocalName("醫療");
+        item.setItemLocalName("����");
         item.setAmount(100000);
         item.setPremium(50);
         
@@ -61,12 +61,12 @@ class PolicyRepositoryTest {
         
         Insured insured1 = new Insured();
         insured1.setInsuredIndo("A141538837");
-        insured1.setInsuredLocalName("王小華");
+        insured1.setInsuredLocalName("���");
         
         items = new LinkedHashSet<Item>();
         item = new Item();
         item.setCode("AD");
-        item.setItemLocalName("死殘");
+        item.setItemLocalName("甇餅��");
         item.setAmount(1000000);
         item.setPremium(120);
         
@@ -74,7 +74,7 @@ class PolicyRepositoryTest {
         
         item = new Item();
         item.setCode("MR");
-        item.setItemLocalName("醫療");
+        item.setItemLocalName("����");
         item.setAmount(100000);
         item.setPremium(50);
         
@@ -96,17 +96,17 @@ class PolicyRepositoryTest {
         policy1.setPolicyNo("9921ABC00002");
         policy1.setEndstNo(0);
         policy1.setApplicantIdno("A123456789");
-        policy1.setApplicantLocalName("王天天");
+        policy1.setApplicantLocalName("��予憭�");
         
         
         insured0 = new Insured();
         insured0.setInsuredIndo("A176280513");
-        insured0.setInsuredLocalName("王日日");
+        insured0.setInsuredLocalName("���");
         
         items = new LinkedHashSet<Item>();
         item = new Item();
         item.setCode("AD");
-        item.setItemLocalName("死殘");
+        item.setItemLocalName("甇餅��");
         item.setAmount(1000000);
         item.setPremium(120);
         
@@ -114,7 +114,7 @@ class PolicyRepositoryTest {
         
         item = new Item();
         item.setCode("MR");
-        item.setItemLocalName("醫療");
+        item.setItemLocalName("����");
         item.setAmount(100000);
         item.setPremium(50);
         
@@ -124,12 +124,12 @@ class PolicyRepositoryTest {
         
         insured1 = new Insured();
         insured1.setInsuredIndo("A141538873");
-        insured1.setInsuredLocalName("王月月");
+        insured1.setInsuredLocalName("�����");
         
         items = new LinkedHashSet<Item>();
         item = new Item();
         item.setCode("AD");
-        item.setItemLocalName("死殘");
+        item.setItemLocalName("甇餅��");
         item.setAmount(1000000);
         item.setPremium(120);
         
@@ -137,7 +137,7 @@ class PolicyRepositoryTest {
         
         item = new Item();
         item.setCode("MR");
-        item.setItemLocalName("醫療");
+        item.setItemLocalName("����");
         item.setAmount(100000);
         item.setPremium(50);
         
@@ -206,9 +206,9 @@ class PolicyRepositoryTest {
 //
 //    @Test
 //    void testFindByApplicantLocalNameLike() {
-//        List<Policy> policies = policyRepository.findByApplicantLocalNameLike("王%");
+//        List<Policy> policies = policyRepository.findByApplicantLocalNameLike("���%");
 //        for(Policy policy:policies) {
-//            assertEquals("王", policy.getApplicantLocalName().substring(0,1));
+//            assertEquals("���", policy.getApplicantLocalName().substring(0,1));
 //        }
 //    }
 
