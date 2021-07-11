@@ -26,24 +26,27 @@ class PolicyRepositoryTest {
     @Autowired
     private PolicyRepository policyRepository;
     
+    
+ 
+    
     @BeforeAll
     void initAll() {
         Policy policy0 = new Policy();
         policy0.setPolicyNo("9921ABC00001");
         policy0.setEndstNo(0);
         policy0.setApplicantIdno("A123456789");
-        policy0.setApplicantLocalName("��之���");
+        policy0.setApplicantLocalName("王先生");
         
         
         Insured insured0 = new Insured();
         insured0.setInsuredIndo("A176280531");
-        insured0.setInsuredLocalName("��之�");
+        insured0.setInsuredLocalName("王哥哥");
         
         
         Set<Item> items = new LinkedHashSet<Item>();
         Item item = new Item();
         item.setCode("AD");
-        item.setItemLocalName("甇餅��");
+        item.setItemLocalName("死殘");
         item.setAmount(1000000);
         item.setPremium(120);
         
@@ -51,7 +54,7 @@ class PolicyRepositoryTest {
         
         item = new Item();
         item.setCode("MR");
-        item.setItemLocalName("����");
+        item.setItemLocalName("意外醫療");
         item.setAmount(100000);
         item.setPremium(50);
         
@@ -60,13 +63,13 @@ class PolicyRepositoryTest {
         insured0.setItems(items);
         
         Insured insured1 = new Insured();
-        insured1.setInsuredIndo("A141538837");
-        insured1.setInsuredLocalName("���");
+        insured1.setInsuredIndo("A176280577");
+        insured1.setInsuredLocalName("王弟弟");
         
         items = new LinkedHashSet<Item>();
         item = new Item();
         item.setCode("AD");
-        item.setItemLocalName("甇餅��");
+        item.setItemLocalName("死殘");
         item.setAmount(1000000);
         item.setPremium(120);
         
@@ -74,7 +77,7 @@ class PolicyRepositoryTest {
         
         item = new Item();
         item.setCode("MR");
-        item.setItemLocalName("����");
+        item.setItemLocalName("意外醫療");
         item.setAmount(100000);
         item.setPremium(50);
         
@@ -95,18 +98,18 @@ class PolicyRepositoryTest {
         Policy policy1 = new Policy();
         policy1.setPolicyNo("9921ABC00002");
         policy1.setEndstNo(0);
-        policy1.setApplicantIdno("A123456789");
-        policy1.setApplicantLocalName("��予憭�");
+        policy1.setApplicantIdno("A111222333");
+        policy1.setApplicantLocalName("王叔叔");
         
         
         insured0 = new Insured();
-        insured0.setInsuredIndo("A176280513");
-        insured0.setInsuredLocalName("���");
+        insured0.setInsuredIndo("A111222333");
+        insured0.setInsuredLocalName("王叔叔");
         
         items = new LinkedHashSet<Item>();
         item = new Item();
         item.setCode("AD");
-        item.setItemLocalName("甇餅��");
+        item.setItemLocalName("死殘");
         item.setAmount(1000000);
         item.setPremium(120);
         
@@ -114,7 +117,7 @@ class PolicyRepositoryTest {
         
         item = new Item();
         item.setCode("MR");
-        item.setItemLocalName("����");
+        item.setItemLocalName("意外醫療");
         item.setAmount(100000);
         item.setPremium(50);
         
@@ -123,13 +126,13 @@ class PolicyRepositoryTest {
         insured0.setItems(items);
         
         insured1 = new Insured();
-        insured1.setInsuredIndo("A141538873");
-        insured1.setInsuredLocalName("�����");
+        insured1.setInsuredIndo("A222333555");
+        insured1.setInsuredLocalName("王姐姐");
         
         items = new LinkedHashSet<Item>();
         item = new Item();
         item.setCode("AD");
-        item.setItemLocalName("甇餅��");
+        item.setItemLocalName("死殘");
         item.setAmount(1000000);
         item.setPremium(120);
         
@@ -137,7 +140,7 @@ class PolicyRepositoryTest {
         
         item = new Item();
         item.setCode("MR");
-        item.setItemLocalName("����");
+        item.setItemLocalName("意外醫療");
         item.setAmount(100000);
         item.setPremium(50);
         
@@ -206,9 +209,9 @@ class PolicyRepositoryTest {
 //
 //    @Test
 //    void testFindByApplicantLocalNameLike() {
-//        List<Policy> policies = policyRepository.findByApplicantLocalNameLike("���%");
+//        List<Policy> policies = policyRepository.findByApplicantLocalNameLike("王%");
 //        for(Policy policy:policies) {
-//            assertEquals("���", policy.getApplicantLocalName().substring(0,1));
+//            assertEquals("王", policy.getApplicantLocalName().substring(0,1));
 //        }
 //    }
 
