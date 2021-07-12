@@ -25,12 +25,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@NamedEntityGraph(name = "policy.insureds", 
-   attributeNodes = @NamedAttributeNode( value= "insureds", subgraph = "insureds.items"), 
-   subgraphs= @NamedSubgraph(name = "insureds.items", 
-   attributeNodes = @NamedAttributeNode( value= "items")))
-        
-
+@NamedEntityGraph(
+    name = "policy.insureds",
+    attributeNodes = @NamedAttributeNode(value= "insureds",subgraph = "policy.insureds.items"), 
+    subgraphs= @NamedSubgraph(name = "policy.insureds.items", attributeNodes = @NamedAttributeNode( value= "items"))
+)
 public class Policy {
     @Id 
     @GeneratedValue(strategy=GenerationType.IDENTITY)
