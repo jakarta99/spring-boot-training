@@ -56,6 +56,9 @@ public class PrimaryDataSourceConfig {
         primaryJpaProperties.put("hibernate.hbm2ddl.auto", "create");
         primaryJpaProperties.put("hibernate.show_sql", "true");
         primaryJpaProperties.put("hibernate.format_sql", "true");
+        primaryJpaProperties.put("hibernate.hbm2ddl.import_files", "/data.sql");
+        primaryJpaProperties.put("hibernate.hbm2ddl.import_files_sql_extractor", "org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor");
+       
         
         return primaryEntityManagerFactoryBuilder
                 .dataSource(primaryDataSource)
